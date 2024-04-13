@@ -1,20 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Frases motivadoras
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Fiestas de Cuenca</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-button color="primary" expand="block" [disabled]="!btn1" (click)="btn1click()"><ion-icon slot="start" name="color-wand-outline"></ion-icon>Antecedentes Históricos</ion-button>
+      <ion-button color="secondary" expand="block" [disabled]="!btn2" (click)="btn2click()"><ion-icon slot="start" name="expand-outline"></ion-icon>Contexto Nacional</ion-button>
+      <ion-button color="tertiary" expand="block" [disabled]="!btn3" (click)="btn3click()"><ion-icon slot="start" name="globe-outline"></ion-icon>Grito de Independencia</ion-button>
+      <ion-button color="primary" expand="block" [disabled]="!btn4" (click)="btn4click()"><ion-icon slot="start" name="help-buoy-outline"></ion-icon>Apoyo y Resistencia</ion-button>
+      <ion-button color="secondary" expand="block" [disabled]="!btn5" (click)="btn5click()"><ion-icon slot="start" name="information-circle-outline"></ion-icon>Consolidación de la Independencia</ion-button>
+      <ion-button color="tertiary" expand="block" [disabled]="!btn6" (click)="btn6click()"><ion-icon slot="start" name="map-outline"></ion-icon>Impacto y Legado</ion-button>
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title *ngIf="active==1">Antecedentes Históricos</ion-title>
+              <ion-title *ngIf="active==2">Contexto Nacional</ion-title>
+              <ion-title *ngIf="active==3">Grito de Independencia</ion-title>
+              <ion-title *ngIf="active==4">Apoyo y Resistencia</ion-title>
+              <ion-title *ngIf="active==5">Consolidación de la Independencia</ion-title>
+              <ion-title *ngIf="active==6">Impacto y Legado</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <p *ngIf="active==1">
+              Cuenca, una ciudad ubicada en la región sur de lo que hoy es Ecuador, había sido parte del Virreinato del Perú desde la época de la colonia española. Durante los años previos a la independencia, hubo un creciente sentimiento de descontento entre los criollos (descendientes de europeos nacidos en América) debido a las restricciones económicas y políticas impuestas por el gobierno colonial.
+              <ion-img src="https://www.cuenca.gob.ec/system/files/fundacion_0.jpg" alt="Imagen de Cuenca antigua"></ion-img>
+            <p *ngIf="active==2">
+              A nivel nacional, el ambiente independentista en Ecuador fue influenciado por los movimientos libertarios en otras partes de América Latina, como la Revolución de Quito de 1809. Este fervor por la autonomía y el deseo de romper con el dominio español se extendió a Cuenca.
+              <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw9PALwBHcFCZn8FgyA9YjHzjFmT8jLfjRaSC92JOiwg5e6MW6bqSN68SpFrVOjmhCtlg&usqp=CAU" alt="Imagen de Cuenca"></ion-img>
+            </p>
+            <p *ngIf="active==3">
+              El 3 de noviembre de 1820, un grupo de líderes cuencanos, encabezados por el prócer local José Antonio Flores, proclamó la independencia de Cuenca. Este acto fue una respuesta a la revolución en Guayaquil, que había declarado su independencia en octubre de ese mismo año.
+              <ion-img src="https://patomiller.files.wordpress.com/2011/07/cuenca-fundacion-2.gif?w=584" alt="Lo mismo q el boton 5 pero con el escenario"></ion-img>
+            </p>
+            <p *ngIf="active==4">
+              La declaración de independencia fue apoyada por muchos habitantes criollos y mestizos de Cuenca, quienes buscaban liberarse del yugo colonial. Sin embargo, también hubo resistencia por parte de aquellos que eran leales al gobierno español, lo que llevó a enfrentamientos y conflictos internos.
+              <ion-img src="https://www.eluniverso.com/resizer/QnO6Q6Z4n25IL0u7O20Nhv-oYv8=/1005x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/KDSL3HZTOZB6BPWEEVOSSWNX5E.JPG" alt="Tremenda imagen de la calle de cuenca con sus banderitas :D"></ion-img>
+            </p>
+            <p *ngIf="active==5">
+              Tras la proclamación inicial, Cuenca tuvo que enfrentar varios meses de incertidumbre y lucha interna. Finalmente, con el apoyo de fuerzas independentistas desde otras partes de Ecuador, la independencia de Cuenca fue consolidada.
+              <ion-img src="https://i.eldiario.com.ec/fotos-manabi-ecuador/2014/04/20140412040000_cuenca-festeja-457-aa-os-de-fundaci.jpg" alt="Cuenca desde el parque calderón"></ion-img>
+            </p>
+            <p *ngIf="active==6">
+              La independencia de Cuenca fue un paso crucial hacia la liberación de Ecuador del dominio español. Aunque el país no logró su independencia total hasta 1822, con la batalla de Pichincha, el proceso iniciado en Cuenca fue fundamental para el movimiento independentista en la región.
+              <ion-img src="https://img.goraymi.com/2015/08/19/5ae0d279279d7c7a3edbf1dfda5ad1e7_xl.jpg" alt="Cuenca"></ion-img>
+            </p>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
 </ion-content>
