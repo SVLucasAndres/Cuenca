@@ -11,12 +11,12 @@
       <ion-title size="large">Fiestas de Cuenca</ion-title>
     </ion-toolbar>
   </ion-header>
-      <ion-button color="primary" expand="block" [disabled]="!btn1" (click)="btn1click()"><ion-icon slot="start" name="color-wand-outline"></ion-icon>Antecedentes Históricos</ion-button>
-      <ion-button color="secondary" expand="block" [disabled]="!btn2" (click)="btn2click()"><ion-icon slot="start" name="expand-outline"></ion-icon>Contexto Nacional</ion-button>
-      <ion-button color="tertiary" expand="block" [disabled]="!btn3" (click)="btn3click()"><ion-icon slot="start" name="globe-outline"></ion-icon>Grito de Independencia</ion-button>
-      <ion-button color="primary" expand="block" [disabled]="!btn4" (click)="btn4click()"><ion-icon slot="start" name="help-buoy-outline"></ion-icon>Apoyo y Resistencia</ion-button>
-      <ion-button color="secondary" expand="block" [disabled]="!btn5" (click)="btn5click()"><ion-icon slot="start" name="information-circle-outline"></ion-icon>Consolidación de la Independencia</ion-button>
-      <ion-button color="tertiary" expand="block" [disabled]="!btn6" (click)="btn6click()"><ion-icon slot="start" name="map-outline"></ion-icon>Impacto y Legado</ion-button>
+      <ion-button color="primary" expand="block" [disabled]="btn1=='false'" (click)="btn1click()"><ion-icon slot="start" name="color-wand-outline"></ion-icon>Antecedentes Históricos</ion-button>
+      <ion-button color="secondary" expand="block" [disabled]="btn2=='false'" (click)="btn2click()"><ion-icon slot="start" name="expand-outline"></ion-icon>Contexto Nacional</ion-button>
+      <ion-button color="tertiary" expand="block" [disabled]="btn3=='false'" (click)="btn3click()"><ion-icon slot="start" name="globe-outline"></ion-icon>Grito de Independencia</ion-button>
+      <ion-button color="primary" expand="block" [disabled]="btn4=='false'" (click)="btn4click()"><ion-icon slot="start" name="help-buoy-outline"></ion-icon>Apoyo y Resistencia</ion-button>
+      <ion-button color="secondary" expand="block" [disabled]="btn5=='false'" (click)="btn5click()"><ion-icon slot="start" name="information-circle-outline"></ion-icon>Consolidación de la Independencia</ion-button>
+      <ion-button color="tertiary" expand="block" [disabled]="btn6=='false'" (click)="btn6click()"><ion-icon slot="start" name="map-outline"></ion-icon>Impacto y Legado</ion-button>
       <ion-modal [isOpen]="isModalOpen">
         <ng-template>
           <ion-header>

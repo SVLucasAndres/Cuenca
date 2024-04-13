@@ -46,12 +46,12 @@ export class HomePage {
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
-  btn1:boolean=false;
-  btn2:boolean=false;
-  btn3:boolean=false;
-  btn4:boolean=false;
-  btn5:boolean=false;
-  btn6:boolean=false;
+  btn1:any;
+  btn2:any;
+  btn3:any;
+  btn4:any;
+  btn5:any;
+  btn6:any;
   active:any;
   btn1click(){
     this.active = 1;
